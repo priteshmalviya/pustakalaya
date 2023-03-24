@@ -4,7 +4,8 @@ import {signInWithPopup, GoogleAuthProvider,FacebookAuthProvider} from "firebase
 import {useAuthState} from "react-firebase-hooks/auth";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { write,read } from "../firebase/firestore/write"
+import { write } from "../firebase/firestore/write"
+import { read } from "../firebase/firestore/read"
 import {BsGoogle} from "react-icons/bs"
 import {FaFacebookF} from "react-icons/fa"
 import { useState } from 'react';
@@ -44,7 +45,7 @@ export default function Login() {
     e.preventDefault();
 
       const data = { email: email, password: password };
-      console.log(data);
+      //console.log(data);
       const exist = await read(data.email);
       if (exist) {
         if(exist.password==password){

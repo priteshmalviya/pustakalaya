@@ -119,7 +119,7 @@ const AddProduct = () => {
                 value={year}
                 required
                 onChange={handlerChange}
-                type="date"
+                type="number"  min="1900" max="2023"
                 name="year"
                 placeholder="Enter Printing Year"
                 className="bg-[#fafafa] p-[6px] my-1 border w-3/4 "
