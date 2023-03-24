@@ -38,7 +38,7 @@ export async function getServerSideProps(context) {
   let Product = docSnap.data();
 
   return {
-    props: { Products: Product } ? { Products: Product } :"No data avalable",
+    props: { Products: Product },
   };
 }
 
