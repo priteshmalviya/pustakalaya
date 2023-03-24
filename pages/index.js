@@ -289,7 +289,7 @@ const Home = ({ Products }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   let Products = [];
 
   const querySnapshot = await getDocs(collection(db, "products"));
